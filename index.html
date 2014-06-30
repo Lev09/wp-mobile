@@ -22,9 +22,9 @@
 				$.ajax({
 					type: "GET",
 					url: homeUrl + "/wp-admin/profile.php",
-					complate: function(xhr, textStatus) {
-						console.log(xhr.status);
-						console.log(textStatus);
+					success: function(xhr, textStatus) {
+						alert.log(xhr.status);
+						alert.log(textStatus);
 						check(xhr.status);
 					}
 				});
