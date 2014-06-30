@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	</head>
+	<body>
+		<script>
+			var homeUrl = "http://lev-hak.url.ph";
+			var loginUrl = homeUrl + "/wp-login.php"
+			
+			var check = function(status) {
+				var rediectUrl = loginUrl + "?action=wordpress_social_authenticate&provider=Google&redirect_to=" + loginUrl;
+				if(status == 302) {
+					window.location.assign(rediectUrl);
+				}
+				else {
+					window.location.assign(homeUrl);
+				}
+			};
+			
+			$(function() {
+				$.ajax({
+					type: "GET",
+					url: homeUrl + "/wp-json/",
+					complate: function(xhr, textStatus) {
+						console.log(xhr.status);
+						console.log(textStatus);
+						check(xhr.status);
+					}
+				});
+			});
+
+		</script>	
+	</body>
+</html>

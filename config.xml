@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="com.aupa.sample" version="1.0.0">
+
+	<name>TT Mobile</name>
+
+	<description>
+		mobile App for TT project
+	</description>
+
+	<author href="http://lev90.github.com" email="levon.hakopyan.gmail.com">
+		Levon
+	</author>
+	
+	<content src="index.html" />
+  <access origin="*" />
+	
+	<feature name="http://api.phonegap.com/1.0/network" />
+	
+</widget>
