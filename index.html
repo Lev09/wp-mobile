@@ -7,21 +7,21 @@
 		<script>
 			var homeUrl = "http://lev-hak.url.ph";
 			var loginUrl = homeUrl + "/wp-login.php"
+			var redirectUrl = loginUrl + "?action=wordpress_social_authenticate&provider=Google&redirect_to=" + loginUrl;
 			
 			var check = function(status) {
-				var rediectUrl = loginUrl + "?action=wordpress_social_authenticate&provider=Google&redirect_to=" + loginUrl;
-				if(status == 302) {
-					window.location.assign(rediectUrl);
+				if(status == 500) {
+					window.location.assign(homeUrl);
 				}
 				else {
-					window.location.assign(homeUrl);
+					window.location.assign(redirectUrl);
 				}
 			};
 			
 			$(function() {
 				$.ajax({
 					type: "GET",
-					url: homeUrl + "/wp-admin/profile.php",
+					url: redirectUrl,
 					complete: function(xhr, textStatus) {
 						alert(xhr.status);
 						alert(textStatus);
@@ -29,7 +29,6 @@
 					}
 				});
 			});
-
 		</script>	
 	</body>
 </html>
