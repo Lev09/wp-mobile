@@ -10,11 +10,11 @@
 			var redirectUrl = loginUrl + "?action=wordpress_social_authenticate&provider=Google&redirect_to=" + loginUrl;
 			
 			var check = function(status) {
-				if(status == 500) {
-					window.location.assign(homeUrl);
+				if(status == 200) {
+					window.location.assign(redirectUrl);
 				}
 				else {
-					window.location.assign(redirectUrl);
+					window.location.assign(homeUrl);
 				}
 			};
 			
