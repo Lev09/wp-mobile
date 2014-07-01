@@ -12,7 +12,9 @@
 	<author href="http://lev90.github.com" email="levon.hakopyan.gmail.com">
 		Levon
 	</author>
-
+	
+	<worklightSettings include="true" />
+	
 	<preference name="phonegap-version"	value="3.5.0" />
 	<preference name="orientation"	value="default" />
 	<preference name="target-device"	value="universal" /> 
