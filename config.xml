@@ -13,11 +13,6 @@
 		Levon
 	</author>
 	
-	<worklightSettings include="true" />
-	
-	<preference name="orientation"	value="default" />
-	<preference name="target-device"	value="universal" /> 
-	
 	<content src="index.html" />
   <access origin="*" />
 	
