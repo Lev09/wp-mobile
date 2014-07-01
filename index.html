@@ -8,7 +8,7 @@
 			var homeUrl = "http://lev-hak.url.ph";
 			var loginUrl = homeUrl + "/wp-login.php"
 			var redirectUrl = loginUrl + "?action=wordpress_social_authenticate&provider=Google&redirect_to=" + loginUrl;
-			
+			/*
 			var check = function(status) {
 				if(status == 500) {
 					window.location.assign(homeUrl);
@@ -23,11 +23,22 @@
 					type: "GET",
 					url: redirectUrl,
 					complete: function(xhr, textStatus) {
-						window.location.assign(homeUrl);
+						//window.location.assign(homeUrl);
 						//check(xhr.status);
 					}
 				});
-			});
+			});*/
+			
+			var inAppBrowser;
+			
+			var initInAppBrowser = function() {
+				return window.open(homeUrl + '/mobile.php', '_blank', 'location=yes');
+			};
+			
+			document.addEventListener("deviceready", function(){ 
+				inAppBrowser = initInAppBrowser();
+			}, false); 
+			
 		</script>	
 	</body>
 </html>
