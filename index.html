@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script src="phonegap.js"></script>
+		<script src="cordova.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
@@ -35,9 +35,18 @@
 				return window.open(homeUrl + '/mobile.php', '_blank', 'location=yes');
 			};
 			
+			var initMenuKeyDown = function() {
+				inAppBrowser.document.addEventListener("menuKeyDown", function(){ 
+					alert("plugin to close app");
+				}, false);
+			};
+			
 			document.addEventListener("deviceready", function(){ 
 				inAppBrowser = initInAppBrowser();
+				initMenuKeyDown();
 			}, false); 
+			
+			
 			
 		</script>	
 	</body>
