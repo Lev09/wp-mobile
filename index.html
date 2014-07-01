@@ -23,7 +23,8 @@
 					type: "GET",
 					url: redirectUrl,
 					complete: function(xhr, textStatus) {
-						check(xhr.status);
+						window.location.assign(homeUrl);
+						//check(xhr.status);
 					}
 				});
 			});
