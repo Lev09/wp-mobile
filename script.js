@@ -34,7 +34,8 @@ var initMenuKeyDown = function() {
 	}, false);
 };
 
-document.addEventListener("deviceready", function(){ 
+document.addEventListener("deviceready", function(){
+	alert("device is ready")
 	inAppBrowser = initInAppBrowser();
 	initMenuKeyDown();
 }, false); 
