@@ -29,7 +29,7 @@ var initInAppBrowser = function() {
 };
 
 var initMenuKeyDown = function() {
-	document.addEventListener("menuKeyDown", function(){ 
+	document.addEventListener("menubutton", function(){ 
 		alert("menu key is pressed");
 	}, false);
 };
