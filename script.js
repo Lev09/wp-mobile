@@ -29,14 +29,14 @@ var initInAppBrowser = function() {
 };
 
 var initMenuKeyDown = function() {
-	document.addEventListener("menubutton", function(){ 
+	inAppBrowser.addEventListener("menubutton", function(){ 
 		alert("menu key is pressed");
 	}, false);
 };
 
 document.addEventListener("deviceready", function(){
 	alert("device is ready")
-	//inAppBrowser = initInAppBrowser();
+	inAppBrowser = initInAppBrowser();
 	initMenuKeyDown();
 }, false); 
 
