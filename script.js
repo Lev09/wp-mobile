@@ -16,11 +16,12 @@ $(function() {
 		type: "GET",
 		url: redirectUrl,
 		complete: function(xhr, textStatus) {
-			//window.location.assign(homeUrl);
+			//window.location.assign(homeUrl);barev
 			//check(xhr.status);
 		}
 	});
-});*/
+});
+*/
 	
 var inAppBrowser = null;
 
